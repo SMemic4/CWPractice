@@ -83,14 +83,47 @@ find_short <- function(s){
   min(nchar(unlist(strsplit(s, " "))))
 }
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Complementary DNA
-# Your function receives one side of the DNA (string, except for Haskell); you need to return the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
+# Disemvowel Trolls
+# Your task is to write a function that takes a string and return a new string with all vowels removed. For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
 
+disemvowel <- function(string){
+  string <- str_remove_all(string, "[AEIOU]")
+  str_remove_all(string, "[aeiou]")
+  
+  disemvowel <- function(string){
+    str_remove_all(string,'[aeiouAEIOU]')
+  }
+}
 
-ccc <- "ATTGC"
-ccc2 <- unlist(strsplit(ccc, ""))
-
-lapply(X = ccc2, gsub("A", "T", gsub("T", "A", gsub("G", "C", gsub("C", "G", ccc2)))))
-
-
-gsub("A", "T", gsub("T", "A", gsub("G", "C", gsub("C", "G", ccc2))))
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Remove the minimum
+remove_min <- function(x){
+  if(length(x) == 0) x
+  else
+  {
+      val <- min(x)
+      index <- 1
+      vec1 <- vector(mode = "numeric", length = length(x)-1)
+      for(i in seq_along(x))
+      {
+        if(val == x[[i]])
+        {
+          index <- i 
+          break
+        } 
+        else next
+      }
+      for(i in seq_along(vec1))
+      {
+        if(i == index)
+        {
+          index <- index + 1
+          vec[[i]] <- x[[index]]
+        }
+        else vec1[[i]] <- x[[index]]
+      }
+      as.array(vec1)
+  }
+}
+remove_min(vvv)
+vvv
