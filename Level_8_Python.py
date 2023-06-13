@@ -26,8 +26,42 @@ def multiple_of_index(arr):
 # Capitalization and Mutability
 # Unfortunately, they have now left and the code they gave you doesn't work. Fix the helper function they wrote so that it works as intended (i.e. make the first character in the string "word" upper case).
 
-def capitalize_word(word):
-    return word.capitalize()
+def shortcut(s):
+    les = list(s)
+    s = ""
+    vowels = ["a", "e", "i", "u"]
+    for i in range(len(les)):
+        if les[i] not in ["a", "e", "i", "o", "u"]:
+            s += les[i]
+        else:
+            continue
+    return s
+
+########################################################################################################################################################################
+# Super Duper Easy
+# Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".
+
+def problem(a):
+    try:
+        return a * 50 + 6
+    except:
+        return "Error"
+
+########################################################################################################################################################################
+# What is between?
+# Complete the function that takes two integers (a, b, where a < b) and return an array of all integers between the input parameters, including them. For example:
+
+def between(a,b):
+    nums = list()
+    while a <= b:
+        nums.append(a)
+        a += 1
+    return nums
+
+########################################################################################################################################################################
+
+
+
 
 
 
