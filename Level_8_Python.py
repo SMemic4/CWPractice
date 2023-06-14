@@ -268,7 +268,130 @@ def paperwork(n, m):
     else: return 0
 
 ########################################################################################################################################################################          
+# Total amount of points
+# write a function that takes this collection and returns the number of points our team (x) got in the championship by the rules given above.
 
+def points(games):
+    total = 0
+    for i in games:
+        x = i[0]
+        y = i[2]
+        if x > y:
+            total += 3
+        elif x == y:
+            total += 1
+        else:
+            total += 0
+    return total
+  
+########################################################################################################################################################################          
+# Keep Hydrated
+# Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling. You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.
+  
+import math
+def litres(time):
+    return(math.floor(time/2))
+  
+########################################################################################################################################################################          
+# Count the number of cubes with paint on
+
+def count_squares(cuts):
+    if cuts == 0: return 0
+    return (6 * cuts * cuts) + 2
+
+########################################################################################################################################################################          
+# Thinkful - Logic Drills: Traffic light
+# ou need a function to handle each change from green, to yellow, to red, and then to green again.
+
+def update_light(current):
+    if current == "green":
+        return "yellow"
+    elif current == "yellow":
+        return "red"
+    else:
+        return "green"
+
+########################################################################################################################################################################          
+# Is he gonna survive?
+# Assuming he's gonna grab a specific given number of bullets and move forward to fight another specific given number of dragons, will he survive?
+
+def hero(bullets, dragons):
+    return bullets >= dragons * 2
+
+########################################################################################################################################################################          
+# Quadrants
+# Given a point in a Euclidean plane (x and y), return the quadrant the point exists in: 1, 2, 3 or 4 (integer). x and y are non-zero integers, therefore the given point never lies on the axes.
+
+def quadrant(x, y):
+    if x > 0:
+        if y > 0:
+            return 1
+        else: return 4
+    else: 
+        if y > 0: return 2
+        else: return 3
+
+########################################################################################################################################################################          
+# Find the Integral
+# In order to find the integral all you need to do is add one to the exponent (the second argument), and divide the coefficient (the first argument) by that new number.
+# For example for 3x^2, the integral would be 1x^3: we added 1 to the exponent, and divided the coefficient by that new number).
+
+def integrate(coefficient, exponent):
+    x = int(coefficient / (exponent +1))
+    y = exponent + 1
+    return str(x) +"x^" + str(y)
+
+########################################################################################################################################################################            
+# Take the Derivative
+# Write a function that finds the derivative
+
+def derive(coefficient, exponent): 
+    x = int(coefficient * exponent)
+    y = exponent - 1
+    return str(x) +"x^" + str(y)
+
+########################################################################################################################################################################            
+# 5 without numbers !!
+# Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/
+
+def unusual_five():
+    return sum([True, True, True, True, True])
+  
+########################################################################################################################################################################            
+# Return Negative
+# In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+
+def make_negative( number ):
+    if number == 0: return 0
+    elif number > 0: return number * -1
+    else: return numbe
+    
+########################################################################################################################################################################            
+# Expressions Matter
+# Given three integers a ,b ,c, return the largest number obtained after inserting the following operators and brackets: +, *, ()
+    
+def expression_matter(a, b, c):
+    return max([(a * (b +c)), (a*b*c), (a + b * c), ((a +b) * c), (a + b + c)])   
+    
+########################################################################################################################################################################              
+# DNA to RNA Conversion    
+# Create a function which translates a given DNA string into RNA. "GCAT"  =>  "GCAU"
+  
+  
+def dna_to_rna(dna):
+    dna = list(dna)
+    ex = ""
+    n = 0
+    for i in dna:
+        if dna[n] == "T":
+            dna[n] = "U"
+            n = n + 1
+        else:
+            n = n + 1
+    for i in dna:
+        ex += i
+    return ex    
+########################################################################################################################################################################
 
 
 
