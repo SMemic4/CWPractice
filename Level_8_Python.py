@@ -201,6 +201,78 @@ def opposite(number):
 def summation(num):
     return sum(list(range(1,num+1)))
 
+########################################################################################################################################################################    
+# Reversed sequence
+# Build a function that returns an array of integers from n to 1 where n>0. Example : n=5 --> [5,4,3,2,1]
+
+def reverse_seq(n):
+    x = range(1,n+1)
+    les = list()
+    for n in x:
+        les.append(n)
+    les.reverse()
+    return les
+
+########################################################################################################################################################################    
+# Jenny's secret message
+# Jenny has written a function that returns a greeting for a user. However, she's in love with Johnny, and would like to greet him slightly different. She added a special case to her function, but she made a mistake.
+
+def greet(name):
+    if name == "Johnny":
+        return "Hello, my love!"
+    else: 
+        return "Hello, {name}!".format(name=name)
+      
+########################################################################################################################################################################          
+# Array plus array
+#  I want to get the sum of two arrays... Actually the sum of all their elements.
+
+def array_plus_array(arr1,arr2):
+        return sum(arr1 + arr2)
+
+########################################################################################################################################################################          
+# Pillars
+# There are pillars near the road. The distance between the pillars is the same and the width of the pillars is the same. Your function accepts three arguments:
+# number of pillars (≥ 1); distance between pillars (10 - 30 meters); width of the pillar (10 - 50 centimeters).
+# Calculate the distance between the first and the last pillar in centimeters (without the width of the first and last pillar).
+
+def pillars(num_pill, dist, width):
+    return (num_pill - 1) * dist * 100 + width * max(0, num_pill - 2)
+
+########################################################################################################################################################################          
+# Be Concise IV - Index of an element in an array
+# Provided is a function Kata which accepts two parameters in the following order: array, element and returns the index of the element if found and "Not found" otherwise. Your task is to shorten the code as much as possible in order to meet the strict character count requirements of the Kata. (no more than 161) You may assume that all array elements are unique.
+
+def find(a, e):
+    try:return a.index(e)
+    except:return "Not found"
+    
+########################################################################################################################################################################          
+# Calculate average
+# Write a function which calculates the average of the numbers in a given list.
+
+def find_average(numbers):
+    try: return sum(numbers)/len(numbers)
+    except: return 0
+
+def find_average(array):
+    return sum(array) / len(array) if array else 0
+
+########################################################################################################################################################################          
+# Beginner Series #1 School Paperwork
+# Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
+# Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
+
+def paperwork(n, m):
+    if n > 0 and m > 0: return n * m
+    else: return 0
+
+########################################################################################################################################################################          
+
+
+
+
+
 
 
 
