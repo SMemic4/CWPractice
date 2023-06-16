@@ -392,6 +392,70 @@ def dna_to_rna(dna):
         ex += i
     return ex    
 ########################################################################################################################################################################
+# Function 1- Hello World
+# Make a simple function called greet that returns the most-famous "hello world!".
+
+def greet():
+    return "hello world!"
+  
+########################################################################################################################################################################              
+# Is n divisible by x and y?
+# Create a function that checks if a number n is divisible by two numbers x AND y. All inputs are positive, non-zero numbers.
+
+def is_divisible(n,x,y):
+    if n % x == 0 and n % y == 0:
+        return True
+    else:
+        return False
+
+########################################################################################################################################################################              
+# Did she say hallo?
+# Write a simple function to check if the string contains the word hallo in different languages.
+
+def validate_hello(greetings):
+    les = ["hello", "ciao", "salut", "hallo", "hola", "ahoj","czesc"]
+    for i in les:
+            if greetings.lower().find(i) != -1:
+                return True
+    return False
+  
+def validate_hello(greetings):
+    return any(x in greetings.lower() for x in ['hello','ciao','salut','hallo','hola','ahoj','czesc'])
+
+########################################################################################################################################################################              
+# Name Shuffler
+# Write a function that returns a string in which firstname is swapped with last name.
+
+def name_shuffler(str):
+    str = str.split(" ")
+    str.reverse()
+    x = ""
+    for i in str:
+        x += i 
+        x += " "
+    return x.rstrip()
+
+def name_shuffler(str_):
+    [first, last] = str_.split()
+    return last + " " + first
+
+########################################################################################################################################################################              
+# Find Multiples of a Number
+# build a program that takes a value, integer , and returns a list of its multiples up to another value, limit . If limit is a multiple of integer, it should be included as well. There will only ever be positive integers passed into the function, not consisting of 0. The limit will always be higher than the base.
+
+def find_multiples(integer, limit):
+    les = list()
+    x = integer
+    while integer <= limit:
+        les.append(integer)
+        integer += x
+    return les
+
+def find_multiples(integer, limit):
+    return list(range(integer, limit+1, integer))
+  
+  
+########################################################################################################################################################################              
 
 
 
