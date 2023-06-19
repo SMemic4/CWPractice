@@ -719,6 +719,80 @@ def no_space(x):
 def no_space(x):
     return x.replace(' ' ,'')
 ########################################################################################################################################################################              
+# True or False? (Beginner)
+# Write a function that returns false without using False
+  
+def if_chuck_says_so():
+    return 0 == 1
+  
+########################################################################################################################################################################       
+# Power
+# The goal is to create a function of two inputs number and power, that "raises" the number up to power (ie multiplies number by itself power times).
+
+def number_to_pwr(number, p): 
+    if p == 0:
+        return 1
+    else:
+        count = 1
+        number1 = number
+        while (count <= p -1):
+            number1 = number1 * number
+            count += 1
+    return number1
+  
+########################################################################################################################################################################       
+# All Star Code Challenge #18
+# Create a function that accepts a string and a single character, and returns an integer of the count of occurrences the 2nd argument is found in the first one.
+
+def str_count(strng, letter):
+    count = 0
+    les = list(strng)
+    for x in les:
+        if x == letter:
+            count += 1
+    return count
+
+return string.count(letter)
+
+########################################################################################################################################################################       
+# Square(n) Sum
+# Complete the square sum function so that it squares each number passed into it and then sums the results together.
+
+def square_sum(numbers):
+    total = 0
+    for x in numbers:
+        total = total + x ** 2
+    return total
+
+def square_sum(numbers):
+    return sum(x ** 2 for x in numbers)
+
+########################################################################################################################################################################       
+# Even or Odd
+# Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+
+def even_or_odd(number):
+    return "Even" if number % 2 == 0 else "Odd"
+
+########################################################################################################################################################################       
+# Return to Sanity
+# This function should return an object, but it's not doing what's intended. What's wrong?
+
+def mystery():
+    results = {
+    'sanity': 'Hello'}
+    return results
+
+########################################################################################################################################################################       
+
+
+
+
+
+
+
+
+
 
 
 
