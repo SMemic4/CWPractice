@@ -477,7 +477,248 @@ def digitize(n):
     return sel
 
 ########################################################################################################################################################################              
+########################################################################################################################################################################     
+# Convert a string to an array
+# Write a function to split a string and convert it into an array of words.
 
+def string_to_array(s):
+    les1 = [""]
+    if s is "":
+        return les1
+    s = s.split()
+    s = list(s)
+    return s
+
+########################################################################################################################################################################     
+# MakeUpperCase
+# Write a function which converts the input string to uppercase.
+
+def make_upper_case(s):
+    return s.upper()
+
+########################################################################################################################################################################     
+# A Needle in the Haystack
+# Write a function findNeedle() that takes an array full of junk but containing one "needle"
+
+def find_needle(haystack):
+    return "found the needle at position " + str(haystack.index("needle"))
+
+########################################################################################################################################################################     
+# Sentence Smash
+# Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. Be careful, there shouldn't be a space at the beginning or the end of the sentence!
+
+def smash(words):
+    x = ""
+    for word in words:
+        x += " " + word
+    return x[1:]
+  
+########################################################################################################################################################################     
+# L1: Set Alarm
+# The function should return true if you are employed and not on vacation (because these are the circumstances under which you need to set an alarm). It should return false otherwise. Examples:
+
+def set_alarm(employed, vacation):
+    if employed is True and vacation is False:
+        return True
+    else:
+        return False
+      
+########################################################################################################################################################################     
+# Price of Mangoes
+# There's a "3 for 2" (or "2+1" if you like) offer on mangoes. For a given quantity and price (per mango), calculate the total cost of the mangoes.
+
+def mango(quantity, price):
+    return ((quantity - int(quantity/3))  * price)
+
+########################################################################################################################################################################     
+# Short Long Short
+# Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside and the longer string on the inside. The strings will not be the same length, but they may be empty ( zero length ).
+
+def solution(a, b):
+    if len(a) < len(b):
+        return a + b + a
+    else:
+        return b + a + b
+      
+########################################################################################################################################################################       
+# Student's Final Grade
+# Create a function finalGrade, which calculates the final grade of a student depending on two parameters: a grade for the exam and a number of completed projects.
+
+def final_grade(exam, projects):
+    if exam > 90 or projects > 10:
+        return 100
+    elif exam > 75 and projects >= 5:
+        return 90
+    elif exam > 50 and projects >= 2: 
+        return 75
+    else:
+        return 0 
+
+########################################################################################################################################################################       
+# Convert a Boolean to a String
+# Implement a function which convert the given boolean value into its string representation.
+
+def boolean_to_string(b):
+    return str(b)
+  
+########################################################################################################################################################################       
+# Counting sheep...
+# Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+
+def count_sheeps(sheep):
+    count = 0
+    for x in sheep:
+        if x == True:
+            count += 1
+    return count
+
+########################################################################################################################################################################            
+# Returning Strings
+# Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
+
+def greet(name):
+    return "Hello, " + name + " how are you doing today?"
+  
+########################################################################################################################################################################            
+# Sun of positives
+# You get an array of numbers, return the sum of all of the positives ones.
+  
+def positive_sum(arr):
+    count = 0
+    for x in arr:
+        if x > 0:
+            count += x
+    return count 
+
+########################################################################################################################################################################            
+# Is it a palindrome?
+# Write a function that checks if a given string (case insensitive) is a palindrome. A palindrome is a word, number, phrase, or other sequence of symbols that reads the same backwards as forwards, such as madam or racecar, the date and time 12/21/33 12:21, and the sentence: "A man, a plan, a canal – Panama".
+
+def is_palindrome(s):
+    return s.lower() == s[::-1].lower()
+
+  
+########################################################################################################################################################################            
+# Opposites Attract
+# Write a function that will take the number of petals of each flower and return true if they are in love and false if they aren't.
+  
+def lovefunc( flower1, flower2 ):
+    return (flower1 + flower2) % 2 != 0  
+  
+########################################################################################################################################################################            
+# Get the mean of an array
+# Return the average of the given array rounded down to its nearest integer.
+  
+def get_average(marks):
+    return int(sum(marks)/len(marks))
+  
+########################################################################################################################################################################              
+# Abbreviate a Two Word Name
+# Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+  
+def abbrev_name(name):
+    return name[0].upper() + "." + name[name.find(" ") + 1].upper()  
+  
+########################################################################################################################################################################              
+# Is the string uppercase?
+# Create a method to see whether the string is ALL CAPS.
+  
+def is_uppercase(inp):
+    return inp == inp.upper()  
+  
+########################################################################################################################################################################              
+# Quadratic Coefficients Solver
+# find the coefficients of quadratic equation of the given two roots
+
+def quadratic(x1, x2):
+    return( 1, -(x1 + x2), x1 * x2)  
+  
+########################################################################################################################################################################              
+# Count Odd Numbers below n
+# Given a number n, return the number of positive odd numbers below n, EASY!
+
+def odd_count(n):
+    return int(n / 2)
+
+########################################################################################################################################################################              
+# String Repeat
+# Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
+
+def repeat_str(repeat, string):
+    return string * repeat
+
+########################################################################################################################################################################              
+# Century From Year
+# Given a year, return the century it is in.
+
+def century(year):
+    return (year + 99) // 100
+
+########################################################################################################################################################################              
+# Reversed Strings
+# Complete the solution so that it reverses the string passed into it.
+
+def solution(string):
+    return string[::-1]
+
+########################################################################################################################################################################              
+# Reversed Words
+# Complete the solution so that it reverses all of the words within the string passed in.
+
+def reverse_words(s):
+    les = list(s.split())
+    les.reverse()
+    return " ".join(les)
+  
+  
+########################################################################################################################################################################              
+# Beginner Series #2 Clock
+# Clock shows h hours, m minutes and s seconds after midnight. Your task is to write a function which returns the time since midnight in milliseconds.
+  
+def past(h, m, s):
+    return h * 3600000 + m * 60000 + s * 1000;  
+  
+########################################################################################################################################################################              
+# POwers of 2
+# Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ).
+  
+def powers_of_two(n):
+    les = range(0, n+1)
+    a = list()
+    for x in les:
+        a.append(2**x)
+    return a  
+  
+########################################################################################################################################################################              
+# Simple multiplication
+# This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
+
+def simple_multiplication(number) :
+    if number % 2 == 0: return number * 8
+    else: return number * 9
+
+########################################################################################################################################################################              
+# Find Nearest square number
+# Your task is to find the nearest square number, nearest_sq(n) or nearestSq(n), of a positive integer n.
+
+import math
+def nearest_sq(n):
+    return round(math.sqrt(n)) ** 2
+  
+########################################################################################################################################################################              
+# Remove String Spaces
+# Write a function that removes the spaces from the string, then return the resultant string.
+
+def no_space(x):
+    return x.replace(" ", "")
+
+########################################################################################################################################################################              
+# Remove String Spaces
+# Write a function that removes the spaces from the string, then return the resultant string.
+
+def no_space(x):
+    return x.replace(' ' ,'')
+########################################################################################################################################################################              
 
 
 
