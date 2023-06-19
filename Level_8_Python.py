@@ -784,7 +784,254 @@ def mystery():
     return results
 
 ########################################################################################################################################################################       
+# Lario and Muigi Pipe Problem
+# Given the a list of numbers, return a fixed list so that the values increment by 1 for each index from the minimum value up to the maximum value (both included).
 
+def pipe_fix(nums):
+    return list(range(min(nums), max(nums)+1))
+
+########################################################################################################################################################################       
+# Twice as old
+# Сalculate how many years ago the father was twice as old as his son (or in how many years he will be twice as old). The answer is always greater or equal to 0, no matter if it was in the past or it is in the future.
+
+def twice_as_old(dad_years_old, son_years_old):
+    return abs(son_years_old * 2 - dad_years_old)
+
+########################################################################################################################################################################       
+# Beginner - Reduce but Grow
+# Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
+
+def grow(arr):
+    total = 1
+    for x in arr:
+        total = total * x
+    return total 
+  
+########################################################################################################################################################################       
+# Volume of a Cuboid
+# Write a function to calculate the volume of a cuboid with three values: the length, width and height of the cuboid
+
+def get_volume_of_cuboid(length, width, height):
+    return length * width * height
+  
+########################################################################################################################################################################       
+# You Can't Code Under Pressure #1
+# Code as fast as you can! You need to double the integer and return it.
+
+def double_integer(i):
+    return i * 2
+
+########################################################################################################################################################################       
+# Get Nth Even Number
+# Return the Nth Even Number
+
+def nth_even(n):
+    return n * 2 - 2
+
+########################################################################################################################################################################       
+# Invert values
+# Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+
+def invert(lst):
+    les = list()
+    for x in lst:
+        les.append(-x)
+    return les
+
+def invert(lst):
+    return [-x for x in lst]
+
+########################################################################################################################################################################       
+# Function 2 - squaring an argument
+# Now you have to write a function that takes an argument and returns the square of it.
+
+def square(n):
+    return n ** 2
+
+########################################################################################################################################################################       
+# Removing Elements
+# Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+
+def remove_every_other(my_list):
+    if len(my_list) == 1:
+        return my_list
+    else:
+        les = list()
+        count = 0
+        while count < len(my_list):
+            les.append(my_list[count])
+            count += 2
+        return les
+
+def remove_every_other(my_list):
+    return my_list[::2]
+
+########################################################################################################################################################################       
+# Remove the time
+# Write a function that takes the website date/time in its original string format and returns the shortened format.
+
+def shorten_to_date(long_date):
+    return long_date[0:long_date.find(",")]
+
+########################################################################################################################################################################       
+# Vexing Vanishing Values
+# accept a list of values, and another value n, then return a new list with every value multiplied by n. For example, [1, 2, 3] and 4 should result in [4, 8, 12].
+
+def mul_by_n(lst, n):
+    return [x * n for x in lst]
+
+########################################################################################################################################################################       
+# Kata Example Twist
+# Add the value "codewars" to the array websites 1,000 times.
+
+websites = []
+count = 0
+while count < 1000:
+    websites.append("codewars")
+    count += 1
+
+websites = ["codewars"] * 1000
+
+########################################################################################################################################################################       
+# Grasshopper - Messi goals function
+# Complete the function to return his total number of goals in all three leagues.
+
+def goals(laLiga, copaDelRey, championsLeague):
+    return laLiga + copaDelRey + championsLeague
+  
+########################################################################################################################################################################       
+# BASIC: Making Six Toast.
+# Define a function that counts how many more (or less) pieces of toast you need in the toasters. Even though you need more or less, the number will still be positive, not negative.
+  
+  def six_toast(num):
+    if num < 6:
+        return 6 - num
+    else:
+        return num - 6 
+  
+########################################################################################################################################################################   
+# Third Angle of a Triangle
+# You are given two interior angles (in degrees) of a triangle. Write a function to return the 3rd.
+  
+def other_angle(a, b):
+    return 180 - a - b  
+  
+########################################################################################################################################################################   
+# The Feast of Many Beasts
+# Write a function feast that takes the animal's name and dish as arguments and returns true or false to indicate whether the beast is allowed to bring the dish to the feast.
+# here is just one rule: the dish must start and end with the same letters as the animal's name
+
+def feast(beast, dish):
+    return beast[0] == dish[0] and beast[-1] == dish[-1]
+
+########################################################################################################################################################################   
+# If you can't sleep, just count sheep!!
+# Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers.
+
+def count_sheep(n):
+    if n == 0:
+        return ""
+    else:
+        count = 1
+        x = ""
+        while count <= n:
+            x += str(count) + " sheep..."
+            count += 1
+    return x
+
+def count_sheep(n):
+    return ''.join(f"{i} sheep..." for i in range(1,n+1))
+
+
+########################################################################################################################################################################   
+# Find out whether the shape is a cube
+# But someone forgot to use proper record keeping, so we only have the volume, and the length of a single side! It's up to you to find out whether the cuboid has equal sides (= is a cube).
+
+def cube_checker(volume, side):
+    return volume > 0 and side > 0 and volume % (side**3) == 0
+
+########################################################################################################################################################################   
+# My head is at the wrong end!
+# Save the animals by switching them back. You will be given an array which will have three values (tail, body, head). It is your job to re-arrange the array so that the animal is the right way round (head, body, tail).
+  
+def fix_the_meerkat(arr):
+    arr.reverse()
+    return arr 
+  
+########################################################################################################################################################################   
+# Gravity Flip
+# There are some columns of toy cubes in the box arranged in a line. The i-th column contains a_i cubes. At first, the gravity in the box is pulling the cubes downwards. When Bob switches the gravity, it begins to pull all the cubes to a certain side of the box, d, which can be either 'L' or 'R' (left or right). Below is an example of what a box of cubes might look like before and after switching gravity.
+
+def flip(d, a):
+    if d == "R":
+        a.sort()
+        return a
+    else:
+        a.sort(reverse = True)
+        return a
+  
+########################################################################################################################################################################   
+# Cat years, Dog years
+# I got them at the same time as kitten/puppy. That was humanYears years ago. Return their respective ages now as [humanYears,catYears,dogYears]
+  
+def human_years_cat_years_dog_years(human_years):
+    if human_years == 1:
+        return [human_years, 15, 15]
+    elif human_years == 2:
+        return [human_years, 24, 24]
+    else:
+        return [human_years, 24 + (human_years-2)*4, 24 + (human_years-2)*5 ]  
+  
+########################################################################################################################################################################   
+# Determine offspring sex based on genes XX and XY chromosomes
+# Determine if the sex of the offspring will be male or female based on the X or Y chromosome present in the male's sperm.
+
+def chromosome_check(sperm):
+     if sperm == "XY":
+        return 'Congratulations! You\'re going to have a son.'
+     else:
+        return 'Congratulations! You\'re going to have a daughter.'
+
+########################################################################################################################################################################   
+# altERnaTIng cAsE <=> ALTerNAtiNG CaSe
+# Define String.prototype.toAlternatingCase (or a similar function/method such as to_alternating_case/toAlternatingCase/ToAlternatingCase in your selected language; see the initial solution for details) such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase. For example:
+
+def to_alternating_case(string):
+    les = list(string)
+    y = list()
+    for x in les:
+        if x.isupper():
+            y.append(x.lower())
+        else:
+            y.append(x.upper())
+    return ''.join(y)
+
+
+########################################################################################################################################################################   
+# Convert a String to a Number!
+# We need a function that can transform a string into a number
+
+def string_to_number(s):
+    return int(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 
 
