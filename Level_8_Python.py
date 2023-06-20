@@ -1014,7 +1014,255 @@ def to_alternating_case(string):
 def string_to_number(s):
     return int(s)
 
+########################################################################################################################################################################   
+# Drink about
+# Make a function that receive age, and return what they drink.
 
+def people_with_age_drink(age):
+    if age < 14: return "drink toddy"
+    elif age < 18: return "drink coke"
+    elif age < 21: return "drink beer"
+    else: return "drink whisky"
+
+########################################################################################################################################################################   
+# How good are you really?
+# You receive an array with your peers' test scores. Now calculate the average and compare your score! Return True if you're better, else False!
+
+def better_than_average(class_points, your_points):
+    if sum(class_points)/len(class_points) < your_points:
+        return True
+    else:
+        return False
+
+########################################################################################################################################################################   
+# Fake Binary
+# Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+
+def fake_bin(x):
+    les = list(x)
+    ss = list()
+    for x in les:
+        x = int(x)
+        if x < 5:
+            ss.append("0")
+        else:
+            ss.append("1")
+    return "".join(ss)
+
+def fake_bin(x):
+    return ''.join('0' if c < '5' else '1' for c in x)
+  
+########################################################################################################################################################################   
+# Simple Fun #1: Seats in Theater
+# Given the total number of rows and columns in the theater (nRows and nCols, respectively), and the row and column you're sitting in, return the number of people who sit strictly behind you and in your column or to the left, assuming all seats are occupied.
+
+  def seats_in_theater(tot_cols, tot_rows, col, row):
+    return (tot_cols - (col -1)) * (tot_rows - row)
+
+########################################################################################################################################################################   
+# Triple Trouble
+# Create a function that will return a string that combines all of the letters of the three inputed strings in groups. Taking the first letter of all of the inputs and grouping them next to each other. Do this for every letter, see example below!
+
+def triple_trouble(one, two, three):
+    x = ""
+    count = 0
+    while count < len(one):
+        x += one[count] + two[count] + three[count]
+        count += 1
+    return x
+  
+########################################################################################################################################################################   
+# Never visit a . . . !?
+# Complete the function which get an input number n such that n >= 10 and n < 10000, then:
+
+def subtract_sum(number):
+    return "apple"
+
+########################################################################################################################################################################   
+# Parse nice int from char problem
+# Write a program that returns the girl's age (0-9) as an integer. Assume the test input string is always a valid string. For example, the test input may be "1 year old" or "5 years old". The first character in the string is always a number.
+
+def get_age(age):
+    return int(age[0])
+
+########################################################################################################################################################################   
+# Difference of Volumes of Cuboids
+# In this simple exercise, you will create a program that will take two lists of integers, a and b. Each list will consist of 3 positive integers above 0, representing the dimensions of cuboids a and b. You must find the difference of the cuboids' volumes regardless of which is bigger.
+  
+def find_difference(a, b):
+    x = 1
+    y = 1
+    for x1 in a:
+        x = x1 * x
+    for y1 in b:
+        y = y1 * y
+    return abs(x - y)    
+  
+########################################################################################################################################################################   
+# Sum The Strings
+# Create a function that takes 2 integers in form of a string as an input, and outputs the sum (also as a string):
+  
+def sum_str(a, b):
+    try:
+        return str(int(a) + int(b))
+    except:
+        if a == "":
+            a = 0
+        if b == "":
+            b = 0
+        return str(int(a) + int(b))
+  
+def sum_str(a, b):
+    return str(int(a or 0) + int(b or 0))  
+  
+########################################################################################################################################################################   
+# Basic variable assignment
+# This code should store "codewa.rs" as a variable called name but it's not working. Can you figure out why?
+
+a = "code"
+b = "wa.rs"
+name = a + b
+
+########################################################################################################################################################################   
+# Are You Playing Banjo?
+
+def are_you_playing_banjo(name):
+    if name[0] == "R" or  name[0] == "r": return name + " plays banjo" 
+    else: return  name + " does not play banjo"
+
+########################################################################################################################################################################   
+# Remove exclamation marks
+# Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+
+def remove_exclamation_marks(s):
+    les = list(s)
+    x = ""
+    count = 0
+    for t in les:
+        if t != "!":
+            x += t
+    return x
+
+def remove_exclamation_marks(s):
+    return s.replace('!', '')
+
+########################################################################################################################################################################   
+# Find Maximum and Minimum Values of a List
+# Your task is to make two functions ( max and min, or maximum and minimum, etc., depending on the language ) that receive a list of integers as input, and return the largest and lowest number in that list, respectively.
+
+def minimum(arr):
+    return min(arr)
+
+def maximum(arr):
+    return max(arr)
+  
+########################################################################################################################################################################   
+# Basic Mathematical Operations
+# Your task is to create a function that does four basic mathematical operations.  
+  
+def basic_op(operator, value1, value2):
+    if operator == "+":
+        return value1 + value2
+    elif operator == "-":
+        return value1 - value2
+    elif operator == "*":
+        return value1 * value2
+    else:
+        return value1 / value2  
+  
+def basic_op(operator, value1, value2):
+    return eval("{}{}{}".format(value1, operator, value2))  
+  
+  
+########################################################################################################################################################################     
+  # Return the day
+  # Complete the function which returns the weekday according to the input number:
+  
+def whatday(num):
+    if num < 1 or num > 7:
+        return "Wrong, please enter a number between 1 and 7"
+    d = {1 : "Sunday", 2 : "Monday", 3: "Tuesday", 4 : "Wednesday", 5 : "Thursday", 6 : "Friday", 7 : "Saturday"}
+    return d.get(num)  
+  
+########################################################################################################################################################################     
+# No Loops 2 - You only need one
+# You will be given an array a and a value x. All you need to do is check whether the provided array contains the value, without using a loop.
+# Array can contain numbers or strings. x can be either. Return true if the array contains the value, false if not. With strings you will need to account for case.
+
+def check(a, x): 
+    return x in a
+
+########################################################################################################################################################################     
+# Grasshopper - Debug
+# Remember that typically temperatures in the current weather conditions are given in whole numbers. It is possible for temperature sensors to report temperatures with a higher accuracy such as to the nearest tenth. Instrument error though makes this sort of accuracy unreliable for many types of temperature measuring sensors.
+
+
+def weather_info (temp):
+    c = convert_to_celsius(temp)
+    if (c < 0):
+        return (str(c) + " is freezing temperature")
+    else:
+        return (str(c) + " is above freezing temperature")
+    
+def convert_to_celsius (temperature):
+    celsius = ((temperature) - 32) * (5/9)
+    return celsius
+
+########################################################################################################################################################################     
+# Remove duplicates from list
+# Define a function that removes duplicates from an array of numbers and returns it as a result. The order of the sequence has to stay the same.
+
+def distinct(seq):
+    track = list()
+    new = list()
+    count = 0
+    while count <= len(seq)-1:
+        if seq[count] in track:
+            count += 1
+        else:
+            new.append(seq[count])
+            track.append(seq[count])
+            count += 1
+    return new
+
+########################################################################################################################################################################     
+# Is it even?
+# Your code will determine if the number passed is even (or not). The function needs to return either a true or false.
+
+def is_even(n): 
+    return n % 2 == 0
+  
+########################################################################################################################################################################     
+# N-th Power
+# You are given an array with positive numbers and a non-negative number N. You should find the N-th power of the element in the array with the index N. If N is outside of the array, then return -1. Don't forget that the first element has the index 0.
+  
+ def index(array, n):
+    try:
+        return array[n]**n
+    except:
+        return -1 
+  
+########################################################################################################################################################################       
+# Exclamation marks series #1: Remove an exclamation mark from the end of string
+# Remove an exclamation mark from the end of a string. For a beginner kata, you can assume that the input data is always a string, no need to verify it.
+  
+def remove(s):
+    if s.endswith("!"):
+        return s[0:len(s)-1]
+    else:
+        return s
+      
+########################################################################################################################################################################            
+# Basic Training: Add item to an Array
+# Add the value "codewars" to the websites array.
+      
+websites.append("codewars")      
+      
+########################################################################################################################################################################      
+      
+      
+      
+      
 
 
 
