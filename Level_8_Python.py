@@ -1258,8 +1258,110 @@ def remove(s):
       
 websites.append("codewars")      
       
-########################################################################################################################################################################      
+########################################################################################################################################################################      # get character from ASCII Valu 
+# Write a function get_char() / getChar() which takes a number and returns the corresponding ASCII char for that value.
       
+ def get_char(c):
+    return chr(c)     
+      
+########################################################################################################################################################################                  
+# Will you make it?
+# Considering these factors, write a function that tells you if it is possible to get to the pump or not. Function should return true if it is possible and false if not.
+
+def zero_fuel(distance_to_pump, mpg, fuel_left):
+    return distance_to_pump - (mpg * fuel_left) <= 0 
+
+########################################################################################################################################################################                  
+# Safen User Input Part I - htmlspecialchars
+# Your mission is to implement a function that converts the following potentially harmful characters:
+
+def html_special_chars(data): 
+    data = data.replace("&", "&amp;")
+    data = data.replace("<", "&lt;")
+    data = data.replace(">", "&gt;")
+    data = data.replace("\"", "&quot;")
+    return data
+
+def html_special_chars(data): 
+    return data.replace('&', "&amp;").replace('>', "&gt;").replace('<', "&lt;").replace('\"', "&quot;")
+
+########################################################################################################################################################################                  
+# String Templates - Bug Fixing #5
+# Oh no! Timmy hasn't followed instructions very carefully and forgot how to use the new String Template feature, Help Timmy with his string template so it works as he expects!
+
+def build_string(*args):
+    return "I like {0}!".format(", ".join(args))
+  
+########################################################################################################################################################################                  
+# Switch it Up!
+# When provided with a number between 0-9, return it in words.
+
+def switch_it_up(number):
+    d = {1 : "One", 
+             2 : "Two",
+             3 : "Three",
+             4 : "Four",
+             5 : "Five",
+             6 : "Six",
+             7 : "Seven",
+             8 : "Eight",
+             9 : "Nine",
+             0 : "Zero"}
+    return d.get(number)
+
+return ['Zero','One','Two','Three','Four','Five','Six','Seven','Eight','Nine'][n]
+
+########################################################################################################################################################################                  
+# Grasshopper - Basic Function Fixer
+# I created this function to add five to any number that was passed in to it and return the new value. It doesn't throw any errors but it returns the wrong number.
+
+def add_five(num):
+    return num + 5
+  
+########################################################################################################################################################################                  
+# Keep up the hoop
+# Alex just got a new hula hoop, he loves it but feels discouraged because his little brother is better than him
+  
+def hoop_count(n):
+  return "Keep at it until you get it" if n < 10 else "Great, now move on to tricks"
+  
+########################################################################################################################################################################                  
+# Grasshopper - Messi Goals
+# Use variables to find the sum of the goals Messi scored in 3 competitions
+
+la_liga_goals = 43
+champions_league_goals = 10
+copa_del_rey_goals = 5
+total_goals = la_liga_goals + champions_league_goals + copa_del_rey_goals  
+  
+########################################################################################################################################################################                  
+# Welcome!
+# Write a 'welcome' function that takes a parameter 'language' (always a string), and returns a greeting - if you have it in your database. It should default to English if the language is not in the database, or in the event of an invalid input.
+
+def greet(language):
+    d = {'english': 'Welcome',
+        'czech': 'Vitejte',
+        'danish': 'Velkomst',
+        'dutch': 'Welkom',
+        'estonian': 'Tere tulemast',
+        'finnish': 'Tervetuloa',
+        'flemish': 'Welgekomen',
+        'french': 'Bienvenue',
+        'german': 'Willkommen',
+        'irish': 'Failte',
+        'italian': 'Benvenuto',
+        'latvian': 'Gaidits',
+        'lithuanian': 'Laukiamas',
+        'polish': 'Witamy',
+        'spanish': 'Bienvenido',
+        'swedish': 'Valkommen',
+        'welsh': 'Croeso'}
+    return d.get(language,"Welcome")
+  
+########################################################################################################################################################################                  
+
+  
+   
       
       
       
