@@ -1359,9 +1359,14 @@ def greet(language):
     return d.get(language,"Welcome")
   
 ########################################################################################################################################################################                  
-
-  
-   
+# How many lightsabers do you own?
+# Inspired by the development team at Vooza, write the function that accepts the name of a programmer, and returns the number of lightsabers owned by that person.
+def how_many_light_sabers_do_you_own(name = None):
+    if name == None: return 0
+    if name == "Zach": return 18
+    return 0   
+    
+########################################################################################################################################################################
       
       
       
