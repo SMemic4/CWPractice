@@ -1367,8 +1367,10 @@ def how_many_light_sabers_do_you_own(name = None):
     return 0   
     
 ########################################################################################################################################################################
-      
-      
+# Multiply
+# Fix the code so it works      
+ def multiply(a, b):
+    return a * b     
       
 
 
