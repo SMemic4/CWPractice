@@ -1372,6 +1372,44 @@ def how_many_light_sabers_do_you_own(name = None):
  def multiply(a, b):
     return a * b     
       
+########################################################################################################################################################################
+# Unfinished Loop - Bug Fixing #1
+# Fix the bug in the unfinished loop
+
+def create_array(n):
+    res=[]
+    i=1
+    while i<=n: 
+        res+=[i]
+        i += 1
+    return res
+  
+########################################################################################################################################################################
+# Quarter of the year
+# Given a month as an integer from 1 to 12, return to which quarter of the year it belongs as an integer number.
+
+def quarter_of(month):
+    d = {1: 1, 2:1, 3:1, 4:2, 5:2, 6:2, 7:3, 8:3, 9:3, 10:4, 11:4, 12:4}
+    return d.get(month)
+
+########################################################################################################################################################################
+# The 'if' function
+# Create a function called _if which takes 3 arguments: a value bool and 2 functions (which do not take any parameters): func1 and func2 When bool is truthy, func1 should be called, otherwise call the func2.
+
+def _if(bool, func1, func2):
+    if bool == True:
+        return func1()
+    else:
+        return func2()
+
+def _if(bool, func1, func2):
+  func1() if bool else func2()
+
+########################################################################################################################################################################
+
+
+
+
 
 
 
