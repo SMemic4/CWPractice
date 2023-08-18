@@ -1406,14 +1406,23 @@ def _if(bool, func1, func2):
   func1() if bool else func2()
 
 ########################################################################################################################################################################
+# Name on billboard
+# You can print your name on a billboard ad. Find out how much it will cost you. Each character has a default price of £30, but that can be different if you are given 2 parameters instead of 1 (allways 2 for Java).
 
+def billboard(name, price=30):
+    total = 0
+    for n in range(1,(len(name)+1)):
+        total += price
+    return total
 
+########################################################################################################################################################################
+# Welcome to the City
+# Create a method that takes as input a name, city, and state to welcome a person. Note that name will be an array consisting of one or more values that should be joined together with one space between each, and the length of the name array in test cases will vary.
 
+def say_hello(name, city, state):
+    return f"Hello, {' '.join(name)}! Welcome to {city}, {state}!"
 
-
-
-
-
+########################################################################################################################################################################
 
 
 
