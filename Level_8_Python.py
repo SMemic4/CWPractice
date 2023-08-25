@@ -1423,6 +1423,166 @@ def say_hello(name, city, state):
     return f"Hello, {' '.join(name)}! Welcome to {city}, {state}!"
 
 ########################################################################################################################################################################
+# Stringy Strings
+# write me a function stringy that takes a size and returns a string of alternating 1s and 0s. the string should start with a 1.
+
+def stringy(size):
+    string = ""
+    active = True
+    for i in range(1, size + 1):
+        if active:
+            string += "1"
+            active = False
+        else:
+            string += "0"
+            active = True
+    return string
+
+########################################################################################################################################################################
+# Double Char
+# Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+
+def double_char(s):
+    x = ""
+    for i in range(0, len(s)):
+        x += s[i] * 2
+    return x
+
+def double_char(s):
+    return ''.join(c * 2 for c in s)
+
+########################################################################################################################################################################
+# Remove First and Last Character Part Two
+# Write a function which returns a new string containing the same character sequences except the first and the last ones but this time separated by spaces.
+
+def array(string):
+    if len(string) <= 4:
+        return None
+    else:
+        s1 = string[string.find(",") + 1: string.rfind(",")].replace(",", " ").strip()
+        if s1 == "":
+            return None
+        else:
+            return s1
+
+########################################################################################################################################################################
+# Are they opposite?
+# Give you two strings: s1 and s2. If they are opposite, return true; otherwise, return false. Note: The result should be a boolean value, instead of a string.
+# The opposite means: All letters of the two strings are the same, but the case is opposite. you can assume that the string only contains letters or it's a empty string. Also take note of the edge case - if both strings are empty then you should return false/False.
+
+def is_opposite(s1,s2):
+    factor = True
+    if s1 == "" or s2 == "":
+        return False
+    for i in range(0, len(s1)):
+        if s1[i] != s2[i]:
+            continue
+        else:
+            factor = False
+            break
+    return factor
+
+########################################################################################################################################################################
+# Printing Array elements with Comma delimiters
+# Input: Array of elements Output: String with comma delimited elements of the array in th same order.
+
+def print_array(arr):
+    return ",".join(str(x) for x in arr)
+
+########################################################################################################################################################################
+# Job Matching #1
+# create a function match (job_matching in Python) which takes a candidate and a job, which will return a Boolean indicating whether the job is a valid match for the candidate.
+
+def job_matching(candidate, job):
+    return candidate.get("min_salary")*0.9 <= job.get("max_salary")
+
+########################################################################################################################################################################
+# Miles per gallon to kilometers per liter
+# Create an application that will display the number of kilometers per liter (output) based on the number of miles per imperial gallon (input).
+
+def converter(mpg):
+    return round((mpg * 1.609344 / 4.54609188), 2)
+
+########################################################################################################################################################################
+# Regex count lowercase letters
+# Your task is simply to count the total number of lowercase letters in a string.
+
+def lowercase_count(strng):
+    total = 0
+    for x in range(0, len(strng)):
+        if strng[x].islower():
+            total += 1
+        else:
+            continue
+    return total
+
+def lowercase_count(strng):
+    return sum(a.islower() for a in strng)
+
+########################################################################################################################################################################
+# Draw stairs
+# Given a number n, draw stairs using the letter "I", n tall and n wide, with the tallest in the top left.
+
+def draw_stairs(n):
+    output_string = ''
+    for num in range(0,n-1):
+        output_string += ' '*num + 'I\n'
+    output_string +=  ' '*(n-1) + 'I'
+    return output_string
+
+########################################################################################################################################################################
+# Total pressure calculation
+# Calculate the total preesure of two molecules
+
+def solution(molar_mass1, molar_mass2, given_mass1, given_mass2, volume, temp) :
+    return ((given_mass1/molar_mass1 + given_mass2/molar_mass2) * (0.082) * (temp + 273.15))/volume
+
+########################################################################################################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
