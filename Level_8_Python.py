@@ -1538,22 +1538,46 @@ def solution(molar_mass1, molar_mass2, given_mass1, given_mass2, volume, temp) :
     return ((given_mass1/molar_mass1 + given_mass2/molar_mass2) * (0.082) * (temp + 273.15))/volume
 
 ########################################################################################################################################################################
-#
+# Training JS #18: Methods of String object--concat() split() and its good friend join()
+# Implement a function which accepts 2 arguments: string and separator.
+# The expected algorithm: split the string into words by spaces, 
+# split each word into separate characters and join them back with the specified separator, join all the resulting "words" back into a sentence with spaces.
 
+def split_and_merge(string_, separator):
+    str1 = string_.split(" ")
+    x = ""
+    for word in str1:
+        ax = separator.join(word)
+        x += " " + ax
+    return x.strip()
 
+########################################################################################################################################################################
+# Sum of Multiples
+# Find the sum of all multiples of n below m
+def sum_mul(n, m):
+    if n == 0 or m == 0:
+        return "INVALID"
+    elif n == m:
+        return 0
+    elif n < 0 or m < 0:
+        return "INVALID"
+    else:
+        return sum(range(n, m, n))
 
+########################################################################################################################################################################
+# Who ate the cookie?
+# For this problem you must create a program that says who ate the last cookie. If the input is a string then "Zach" ate the cookie. If the input is a float or an int then "Monica" ate the cookie. If the input is anything else "the dog" ate the cookie.
 
+def cookie(x):
+    if type(x) == str:
+        return "Who ate the last cookie? It was Zach!"
+    elif type(x) == int or type(x) == float:
+        return "Who ate the last cookie? It was Monica!"
+    else:
+        return "Who ate the last cookie? It was the dog!"
 
-
-
-
-
-
-
-
-
-
-
+########################################################################################################################################################################
+# 
 
 
 
