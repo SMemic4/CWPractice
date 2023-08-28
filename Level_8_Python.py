@@ -1577,24 +1577,123 @@ def cookie(x):
         return "Who ate the last cookie? It was the dog!"
 
 ########################################################################################################################################################################
-# 
+# Who is going to pay for the wall?
+# Your code will show Full name of the neighbor and the truncated version of the name as an array. If the number of the characters in name is less than or equal to two, it will return an array containing only the name as is"
 
+def who_is_paying(name):
+    return [name, name[0:2]] if len(name) >= 3 else [name]
 
+########################################################################################################################################################################
+# Grasshopper - Function syntax debugging
+# A student was working on a function and made some syntax mistakes while coding. Help them find their mistakes and fix them.
 
+def main (verb, noun):
+    return verb + noun
 
+########################################################################################################################################################################
+# Holiday VIII - Duty Free
+# The purpose of this kata is to work out just how many bottles of duty free whiskey you would have to buy such that the savings over the normal high street price would effectively cover the cost of your holiday.
 
+import math
+def duty_free(price, discount, holiday_cost):
+    return math.floor(holiday_cost/((discount/100)*price))
+    
+########################################################################################################################################################################
+# No zeros for heros
+# Numbers ending with zeros are boring. They might be fun in your world, but not here. Get rid of them. Only the ending ones.
 
+def no_boring_zeros(n):
+    if n == 0:
+        return 0
+    n = str(n)
+    val = 0
+    for x in n[::-1]:
+        if x == "0":
+            val += 1
+        else:
+            break
+    return int(n[0:len(n)-val])
 
+def no_boring_zeros(n):
+    try:
+        return int(str(n).rstrip('0'))
+    except ValueError:
+        return 0
 
+########################################################################################################################################################################
+# Area or Perimeter
+# You are given the length and width of a 4-sided polygon. The polygon can either be a rectangle or a square. If it is a square, return its area. If it is a rectangle, return its perimeter. 
 
+def area_or_perimeter(l , w):
+    return l * w if l == w else 2 * l + 2 * w
+    
+########################################################################################################################################################################
+# Reverse List Order
+# In this kata you will create a function that takes in a list and returns a list with the reverse order.
 
+def reverse_list(l):
+    l.reverse()
+    return l
 
+def reverse_list(l):
+  return l[::-1]
+########################################################################################################################################################################
+# Will there be enough space?
+# You have to write a function that accepts three parameters: If there is enough space, return 0, and if there isn't, return the number of passengers he can't take.
 
+def enough(cap, on, wait):
+    return 0 if cap >= on + wait else abs(on + wait - cap)
 
+########################################################################################################################################################################
+# Remove First and Last Character
+# It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
 
+def remove_char(s):
+    return s[1:len(s)-1]
 
+########################################################################################################################################################################
+# How much water do I need?
+#
 
+def how_much_water(water, load, clothes):
+    if clothes > (2*load):
+        return "Too much clothes"
+    elif clothes < load:
+        return "Not enough clothes"
+    return float("%.2f" % (water * 1.1 ** (clothes - load)))
+    
+########################################################################################################################################################################
+# Collatz Conjecture (3n+1)
+# Your task is to make a function hotpo that takes a positive n as input and returns the number of times you need to perform this algorithm to get n = 1.
 
+def hotpo(n):
+    val = 0
+    while n != 1:
+        if n % 2 == 0:
+            n = n / 2 
+            val += 1
+        else:
+            val += 1
+            n = n * 3 + 1
+    return val
+
+########################################################################################################################################################################
+# Filter out the geese
+#
+
+geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+def goose_filter(birds):
+    return [bird for bird in birds if bird not in geese]
+    
+########################################################################################################################################################################
+#
+#
+
+########################################################################################################################################################################
+#
+#
+
+########################################################################################################################################################################
 
 
 
