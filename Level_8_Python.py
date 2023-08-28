@@ -1713,12 +1713,24 @@ def apple(x):
     return "It's hotter than the sun!!" if int(x)**2 > 1000 else "Help yourself to a honeycomb Yorkie for the glovebox."
 
 ########################################################################################################################################################################
-#
-#
+# Count the Monkeys!
+# Given the number (n), populate an array with all numbers up to and including that number, but excluding zero.
 
+def monkey_count(n):
+    return list(range(1, n+1))
+    
 ########################################################################################################################################################################
-#
-#
+# Check same case
+# Write a function that will check if two given characters are the same case.
+
+def same_ase(a, b): 
+    if a.isalpha() and b.isalpha():
+        if a.isupper() and b.isupper() or a.islower() and b.islower():
+            return 1
+        else:
+            return 0
+    else:
+        return -1
 
 ########################################################################################################################################################################
 #
