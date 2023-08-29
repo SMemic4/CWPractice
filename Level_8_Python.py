@@ -1733,36 +1733,102 @@ def same_ase(a, b):
         return -1
 
 ########################################################################################################################################################################
-#
-#
+# Crash Override
+# Your task is to create a function that, given a proper first and last name, will return the correct alias.
+def alias_gen(f_name, l_name):
+    if f_name[0].isalpha() and l_name[0].isalpha():
+        return f"{FIRST_NAME[f_name[0].upper()]} {SURNAME[l_name[0].upper()]}"
+    else:
+        return 'Your name must start with a letter from A - Z.'
+########################################################################################################################################################################
+# Count of positives / sum of negatives
+# Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers. 0 is neither positive nor negative.
+
+def count_positives_sum_negatives(arr):
+    if not arr:
+        return []
+    negsum = 0
+    possum = 0
+    for x in arr:
+        if x > 0:
+            possum += 1
+        else:
+            negsum += x
+    return [possum, negsum]
 
 ########################################################################################################################################################################
-#
-#
+# You only need one - Beginner
+# You will be given an array a and a value x. All you need to do is check whether the provided array contains the value. Array can contain numbers or strings. X can be either.
+
+def check(seq, elem):
+    active = False
+    for x in seq:
+        if x == elem:
+            active = True
+    return active
+
+def check(seq, elem):
+    return elem in seq
+    
+########################################################################################################################################################################
+# Find the Remainder
+# Write a function that accepts two integers and returns the remainder of dividing the larger value by the smaller value. Division by zero should return an empty value.
+
+def remainder(a,b):
+    try:
+        if a >= b:
+            return a % b
+        else:
+            return b % a
+    except:
+        return None
+        
+########################################################################################################################################################################
+# Enumerable Magic - Does My List Include This?
+# Create a method that accepts a list and an item, and returns true if the item belongs to the list, otherwise false.
+
+def include(arr,item):
+    return item in arr
 
 ########################################################################################################################################################################
-#
-#
+# Sum Arrays
+# Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.
+
+def sum_array(a):
+    try:
+        return sum(a)
+    except:
+        return 0
 
 ########################################################################################################################################################################
-#
-#
+# 
+# 
 
 ########################################################################################################################################################################
-#
-#
+# 
+# 
 
 ########################################################################################################################################################################
+# 
+# 
 
+########################################################################################################################################################################
+# 
+# 
 
+########################################################################################################################################################################
+# 
+# 
 
+########################################################################################################################################################################
+# 
+# 
 
+########################################################################################################################################################################
+# 
+# 
 
-
-
-
-
-
+########################################################################################################################################################################
 
 
 
