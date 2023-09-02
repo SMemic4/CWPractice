@@ -1808,16 +1808,30 @@ def cockroach_speed(s):
     return int(s*27.778)
 
 ########################################################################################################################################################################
-# 
-# 
+# Pick a set of first elements
+# Write a function to get the first element(s) of a sequence. Passing a parameter n (default=1) will return the first n element(s) of the sequence. If n == 0 return an empty sequence []
+
+def first(seq, n = 1): 
+    return seq[0:n]
 
 ########################################################################################################################################################################
-# 
-# 
+# Sum of differences in array
+# Your task is to sum the differences between consecutive pairs in the array in descending order.
+
+def sum_of_differences(arr):
+    if len(arr) <= 1:
+        return 0
+    else:
+        arr.sort(reverse = True)
+        return arr[0] - arr[-1]
 
 ########################################################################################################################################################################
-# 
-# 
+# I love you, a little , a lot, passionately ... not at all
+# Your goal in this kata is to determine which phrase the girls would say at the last petal for a flower of a given number of petals. The number of petals is always greater than 0.
+
+def how_much_i_love_you(nb_petals):
+    dict = {1 : "I love you", 2 : "a little", 3 : "a lot", 4 : "passionately", 5: "madly", 0 : "not at all"}
+    return dict.get(nb_petals % 6)
 
 ########################################################################################################################################################################
 # 
