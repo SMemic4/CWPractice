@@ -1834,6 +1834,214 @@ def how_much_i_love_you(nb_petals):
     return dict.get(nb_petals % 6)
 
 ########################################################################################################################################################################
+# Multiplication table for number
+# Your goal is to return multiplication table for number that is always an integer from 1 to 10.
+
+def multi_table(number):
+    string = ""
+    for i in range(1,11):
+        string += (f"{i} * {number} = {i*number}\n")
+    return string.rstrip()
+
+########################################################################################################################################################################
+# Convert to Binary
+# Given a non-negative integer n, write a function to_binary/ToBinary which returns that number in a binary format.
+
+def to_binary(n):
+    return int(str(bin(n))[2:])
+
+########################################################################################################################################################################
+# Grasshopper - Terminal game move function
+# In this game, the hero moves from left to right. The player rolls the dice and moves the number of spaces indicated by the dice two times.
+# Create a function for the terminal game that takes the current position of the hero and the roll (1-6) and return the new position.
+
+def move(position, roll):
+    return position + roll * 2
+
+########################################################################################################################################################################
+# Switch/Case - Bug Fixing #6
+# Oh no! Timmy's evalObject function doesn't work. He uses Switch/Cases to evaluate the given properties of an object, can you fix timmy's function?
+
+def eval_object(v):
+    match v["operation"]:
+        case "+":
+            return v["a"] + v["b"]
+        case "-":
+            return v["a"] - v["b"]
+        case "/":
+            return v["a"] / v["b"]
+        case "*":
+            return v["a"] * v["b"]
+        case "%":
+            return v["a"] % v["b"]
+        case "**":
+            return v["a"] ** v["b"]
+        case _:
+            return 1
+
+########################################################################################################################################################################
+# Find the first non-consecutive number
+# Your task is to find the first element of an array that is not consecutive.
+
+def first_non_consecutive(arr):
+    if arr == list(range(arr[0], arr[len(arr)-1])):
+        return None
+    else:
+        for i in range(0,len(arr)-1):
+            if arr[i+1] != arr[i]+1:
+                return arr[i+1]
+
+########################################################################################################################################################################
+# The Wide-Mouthed frog!
+# create complete the mouth_size method this method takes one argument animal which corresponds to the animal encountered by the frog. If this one is an alligator (case-insensitive) return small otherwise return wide.
+
+def mouth_size(animal): 
+    return "wide" if animal.lower() != "alligator" else "small"
+
+
+########################################################################################################################################################################
+# Find numbers which are divisible by given number
+# Complete the function which takes two arguments and returns all numbers which are divisible by the given divisor. First argument is an array of numbers and the second is the divisor.
+
+def divisible_by(numbers, divisor):
+    return [x for x in numbers if x % divisor == 0]
+
+########################################################################################################################################################################
+# Sort and Star
+# will be given a list of strings. You must sort it alphabetically (case-sensitive, and based on the ASCII values of the chars) and then return the first value.
+# The returned value must be a string, and have "***" between each of its letters.
+def two_sort(array):
+    array.sort()
+    string = ""
+    for i in array[0]:
+        string += i + "***"
+    return string[0:len(string)-3]
+  
+def two_sort(lst):
+    return '***'.join(min(lst))
+
+########################################################################################################################################################################
+# Convert a Number to a String!
+# We need a function that can transform a number (integer) into a string.
+
+def number_to_string(num):
+    return str(num)
+
+########################################################################################################################################################################
+# Sum Mixed Array
+# Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.Return your answer as a number.
+
+def sum_mix(arr):
+    sum = 0
+    for i in arr:
+        sum += int(i)
+    return sum
+
+def sum_mix(arr):
+    return sum(int(n) for n in arr)
+  
+########################################################################################################################################################################
+# Hex to Decimal
+# Complete the function which converts hex number (given as a string) to a decimal number.
+
+def hex_to_dec(s):
+    return int(s, 16)
+
+########################################################################################################################################################################
+#
+#
+
+########################################################################################################################################################################
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+########################################################################################################################################################################
 # 
 # 
 
