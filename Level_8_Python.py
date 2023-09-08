@@ -2303,8 +2303,88 @@ def sum_array(arr):
     return sum(arr) - max(arr) - min(arr)
 
 ########################################################################################################################################################################
+# Correct the mistakes of the character recognition software
 #
+
+def correct(s):
+    return s.replace("5", "S").replace("0", "O").replace("1","I")
+
+########################################################################################################################################################################
+# How many stairs will Suzuki climb in 20 years?
+# Your function should return the 20 year estimate of the stairs climbed using the formula above.
+
+def stairs_in_20(stairs):
+    i = 0
+    for x in stairs:
+        i += sum(x)
+    return i * 20
+
+########################################################################################################################################################################
+# 101 Dalmatians - squash the bugs, not the dogs!
 #
+
+def how_many_dalmatians(n):
+    if n == 101: 
+        return  "101 DALMATIONS!!!" 
+    elif n <= 10: 
+        return "Hardly any"
+    elif n < 51: 
+        return "More than a handful!"
+    else:
+        return "Woah that's a lot of dogs!"
+
+########################################################################################################################################################################
+# Define a card suit
+#
+
+def define_suit(card):
+    les = {"C": "clubs", "S" : "spades", "D" : "diamonds", "H" : "hearts"}
+    return les.get(card[-1])
+
+########################################################################################################################################################################
+# Freudian translator
+#
+
+def to_freud(sentence):
+    if sentence == "":
+        return ""
+    string = ""
+    for x in sentence.rsplit(" "):
+        string += "sex "
+    return string.rstrip()
+
+########################################################################################################################################################################
+# Exclamation marks series #4: Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string
+# Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string. For a beginner kata, you can assume that the input data is always a non empty string, no need to verify it.
+
+def remove(s):
+    return s.replace("!","") + "!"
+
+########################################################################################################################################################################
+# Exclamation marks series #2: Remove all exclamation marks from the end of sentence
+# Remove all exclamation marks from the end of sentence.
+
+def remove(s):
+    while s.endswith("!"):
+        s = s[0:len(s)-1]
+    return s
+
+def remove(s):
+    return s.rstrip("!")
+
+########################################################################################################################################################################
+# Ensure question
+# Given a string, write a function that returns the string with a question mark ("?") appends to the end, unless the original string ends with a question mark, in which case, returns the original string.
+
+def ensure_question(s):
+    return s if s.endswith("?") else s + "?"
+
+########################################################################################################################################################################
+# Filtering even numbers (Bug Fixes)
+#
+
+def kata_13_december(lst): 
+    return [x for x in lst if x % 2 != 0]
 
 ########################################################################################################################################################################
 #
@@ -2315,8 +2395,14 @@ def sum_array(arr):
 #
 
 ########################################################################################################################################################################
+#
+#
 
+########################################################################################################################################################################
+#
+#
 
+########################################################################################################################################################################
 
 
 
