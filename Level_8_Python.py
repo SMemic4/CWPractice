@@ -1967,9 +1967,126 @@ def two_highest(arg1):
         return arg1
         
 ########################################################################################################################################################################
-#
+# FIXME: Replace all dots
+# The code provided is supposed replace all the dots . in the specified String str with dashes -
+
+import re
+def replace_dots(s):
+    return re.sub("\.", "-", s)
+    
+########################################################################################################################################################################
+# Is your period late?
+# Return true if the number of days passed from last to today is greater than cycleLength. Otherwise, return false.
+
+from datetime import *
+def period_is_late(last,today,cycle_length):
+    return last + timedelta(days = cycle_length) < today
+
+########################################################################################################################################################################
+# Classy Extentions
+# Your task is to complete the Cat class which Extends Animal and replace the speak method to return the cats name + meows. e.g. 'Mr Whiskers meows.'
+
+from preloaded import Animal
+
+class Cat(Animal):
+    def speak(self):
+            return f"{self.name} meows."
+        
+########################################################################################################################################################################
+# Unexpected parsing
+# Function should return a dictionary/Object/Hash with "status" as a key, whose value can : "busy" or "available" depending on the truth value of the argument is_busy.
+def get_status(is_busy):
+    return {"status": ("available", "busy")[is_busy]}
+
+########################################################################################################################################################################
+# Grasshopper - Terminal Game #1
+# In this first kata in the series, you need to define a Hero prototype to be used in a terminal game. The hero should have the following attributes:
+
+class Hero(object):
+    def __init__(self, name = 'Hero', position = '00', health = 100, damage = 5, experience = 0):
+        self.name = name
+        self.position = position
+        self.health = health
+        self.damage = damage
+        self.experience = experience
+
+########################################################################################################################################################################
+# Regular Ball Super Ball
+# Create a class Ball. Ball objects should accept one argument for "ball type" when instantiated. If no arguments are given, ball objects should instantiate with a "ball type" of "regular."
+
+class Ball(object):
+    def __init__(self, ball_type = "regular"):
+        self.ball_type = ball_type
+
+########################################################################################################################################################################
+# CSV representation of array
+# Create a function that returns the CSV representation of a two-dimensional numeric array.
+
+def to_csv_text(array):
+    string = ""
+    for x in array:
+        for y in x:
+            string += str(y) + ","
+        string = string[0: len(string)-1] + "\n"
+    return string.rstrip()
+
+########################################################################################################################################################################
+# Byte me!
+# Return byte size of an object
+import sys
+def total_bytes(object):
+    return sys.getsizeof(object)
+
+########################################################################################################################################################################
+# Is there a vowel in there?
+# Given an array of numbers, check if any of the numbers are the character codes for lower case vowels (a, e, i, o, u). If they are, change the array value to a string of that vowe
+
+def is_vow(inp):
+    for x in range(0, len(inp)):
+        if inp[x] == 97:
+            inp.pop(x)
+            inp.insert(x, "a")
+        if inp[x] == 101:
+            inp.pop(x)
+            inp.insert(x, "e")
+        if inp[x] == 105:
+            inp.pop(x)
+            inp.insert(x, "i")
+        if inp[x] == 111:
+            inp.pop(x)
+            inp.insert(x, "o")
+        if inp[x] == 117:
+            inp.pop(x)
+            inp.insert(x, "u")
+    return inp
+
+def is_vow(inp):
+    return [chr(n) if chr(n) in "aeiou" else n for n in inp]
+########################################################################################################################################################################
+# Classic Hello World
+# You are given a method called main, make it print the line Hello World!, (yes, that includes a new line character at the end) and don't return anything. Make it print hello world
+
+class Solution:
+    def main(self):
+        print("Hello World!")
+
+########################################################################################################################################################################
+# OOP: Object Oriented Piracy
 #
 
+class Ship:
+    def __init__(self, draft, crew):
+        self.draft = draft
+        self.crew = crew
+    def is_worth_it(self):
+        return True if self.draft - self.crew * 1.5 > 20 else False
+
+########################################################################################################################################################################
+# Duck Duck Goose
+# Task: Given an array of Player objects (an array of associative arrays in PHP) and an index (1-based), return the name of the chosen Player(name is a property of Player objects, e.g Player.name)
+
+def duck_duck_goose(players, goose):
+    return players[goose % len(players) - 1].name
 ########################################################################################################################################################################
 #
 #
@@ -1979,24 +2096,10 @@ def two_highest(arg1):
 #
 
 ########################################################################################################################################################################
-  
+#
+#
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+########################################################################################################################################################################
 
 
 
