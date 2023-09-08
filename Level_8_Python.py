@@ -2102,12 +2102,130 @@ def excluding_vat_price(price):
     return -1 if price == None else round(price / 1.15, 2)
 
 ########################################################################################################################################################################
+# Holiday VI - Shark Pontoon
 #
-#
+
+def shark(pontoon_distance, shark_distance, you_speed, shark_speed, dolphin):
+    if dolphin:
+        return "Alive!" if (pontoon_distance / you_speed < shark_distance / (shark_speed * 0.5)) else "Shark Bait!"
+    else: 
+        return "Alive!" if (pontoon_distance / you_speed < shark_distance / shark_speed) else "Shark Bait!"
 
 ########################################################################################################################################################################
-#
-#
+# To square(root) or not to square(root)
+# Return a new array with processing every number of the input-array like this:. If the number has an integer square root, take this, otherwise square the number.
+
+import math
+def square_or_square_root(arr):
+    les = []
+    for x in arr:
+        if math.sqrt(x).is_integer():
+            les.append(math.sqrt(x))
+        else:
+            les.append(x**2)
+    return les
+########################################################################################################################################################################
+# Grasshopper - Grade book
+# Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.
+
+def get_grade(s1, s2, s3):
+    avg = (s1 + s2 + s3) / 3
+    if avg >= 90:
+        return "A"
+    if avg >= 80:
+        return "B"
+    if avg >= 70:
+        return "C"
+    if avg >= 60:
+        return "D"
+    else:
+        return "F"
+
+########################################################################################################################################################################
+# Grasshopper - Personalized Message
+# Create a function that gives a personalized greeting. This function takes two parameters: name and owner. Use conditionals to return the proper message:
+
+def greet(name, owner):
+    return "Hello boss" if name == owner else "Hello guest"
+
+########################################################################################################################################################################
+# Transportation on vacation
+# 
+
+def rental_car_cost(d):
+    if d >= 7: 
+        return d * 40 - 50
+    elif d >= 3: 
+        return d * 40 - 20
+    else:
+        return d*40
+
+########################################################################################################################################################################
+# Do I get a bonus?
+# 
+
+def bonus_time(salary, bonus):
+    return f"${salary*10}" if bonus else f"${salary}"
+
+########################################################################################################################################################################
+# Get Planet Name By ID
+# The function is not returning the correct values. Can you figure out why?
+
+def get_planet_name(id):
+    # This doesn't work; Fix it!
+    name=""
+    match id:
+        case 1: name = "Mercury"
+        case 2: name = "Venus"
+        case 3: name = "Earth"
+        case 4: name = "Mars"
+        case 5: name = "Jupiter"
+        case 6: name = "Saturn"
+        case 7: name = "Uranus"  
+        case 8: name = "Neptune"
+    return name
+
+########################################################################################################################################################################
+# For Twins: 1. Types
+# Write a function that will accept two parameters: variable and type and check if type of variable is matching type. Return true if types match or false if not.
+
+########################################################################################################################################################################
+# Fundamentals: Return
+# Make multiple functions that will return the sum, difference, modulus, product, quotient, and the exponent respectively.
+
+def add(a,b):
+    return a + b
+
+def multiply(a,b):
+    return a * b
+    
+def  divide(a,b):
+    return a / b
+
+def  mod(a,b):
+    return a % b
+
+def exponent(a,b):
+    return a ** b
+
+def subt(a,b):
+    return a - b
+
+########################################################################################################################################################################
+# Semi-Optional
+# We have implemented a function wrap(value) that takes a value of arbitrary type and wraps it in a new JavaScript Object or Python Dict setting the 'value' key on the new Object or Dict to the passed-in value.
+
+def wrap(value):
+    return {"value":value}
+
+########################################################################################################################################################################
+# USD => CNY
+# Create a function that converts US dollars (USD) to Chinese Yuan (CNY)
+
+def usdcny(usd):
+    x = format(usd * 6.75, ".2f")
+    return f"{x} Chinese Yuan"
+
 ########################################################################################################################################################################
 # 
 # 
@@ -2121,20 +2239,5 @@ def excluding_vat_price(price):
 # 
 
 ########################################################################################################################################################################
-# 
-# 
-
-########################################################################################################################################################################
-# 
-# 
-
-########################################################################################################################################################################
-# 
-# 
-
-########################################################################################################################################################################
-
-
-
 
 
