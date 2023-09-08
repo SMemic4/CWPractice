@@ -2227,17 +2227,103 @@ def usdcny(usd):
     return f"{x} Chinese Yuan"
 
 ########################################################################################################################################################################
-# 
-# 
+# Enumerable Magic #25 - Take the First N Elements
+# Create a function that accepts a list/array and a number n, and returns a list/array of the first n elements from the list/array.
+
+def take(arr,n):
+    return arr[0:n]
 
 ########################################################################################################################################################################
-# 
-# 
+# Hello, Name or World!
+# Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
+
+def hello(name = None):
+    if name == "" or name == None:
+        return "Hello, World!"
+    else:
+        return f"Hello, {name.title()}!"
 
 ########################################################################################################################################################################
-# 
+# Pirates!! Are the Cannons ready!??
 # 
 
+def cannons_ready(gunners):
+    for x in gunners.values():
+        if x == "nay":
+            return "Shiver me timbers!"
+    return "Fire!"
+
 ########################################################################################################################################################################
+# Count by X
+# Create a function with two arguments that will return an array of the first n multiples of x.
+
+def count_by(x, n):
+    return list(range(x, x*n+1, x))
+
+########################################################################################################################################################################
+# Simple validation of a username with regex
+# Write a simple regex to validate a username
+
+def validate_usr(username):
+    if len(username) < 4 or len(username) > 16:
+        return False
+    if username.lower() != username:
+        return False
+    if username.isalnum():
+        return True
+    if username.replace("_", "1").isalnum():
+        return True
+    else:
+        return False
+    
+
+########################################################################################################################################################################
+# Is this my tail?
+#
+
+def correct_tail(body, tail):
+     return body[-1] == tail
+
+########################################################################################################################################################################
+# Merge two sorted arrays into one
+# Complete the function mergeArrays(arr1, arr2), where arr1 and arr2 are the original sorted arrays.
+
+def merge_arrays(arr1, arr2):
+    a = list(set(arr1 + arr2))
+    a.sort()
+    return a
+    
+########################################################################################################################################################################
+# Sum without highest and lowest number
+# The highest or lowest element respectively is a single element at each edge, even if there are more than one with the same value.
+
+def sum_array(arr):
+    if arr == None or len(arr) == 0 or len(arr) == 1:
+        return 0
+    return sum(arr) - max(arr) - min(arr)
+
+########################################################################################################################################################################
+#
+#
+
+########################################################################################################################################################################
+#
+#
+
+########################################################################################################################################################################
+#
+#
+
+########################################################################################################################################################################
+
+
+
+
+
+
+
+
+
+
 
 
