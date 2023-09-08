@@ -1948,13 +1948,24 @@ def hex_to_dec(s):
     return int(s, 16)
 
 ########################################################################################################################################################################
-#
-#
+# Incorrect division method
+# This method, which is supposed to return the result of dividing its first argument by its second, isn't always returning correct values. Fix it.
+
+def divide_numbers(x,y):
+    return x / y
 
 ########################################################################################################################################################################
-#
-#
+# Return Two Highest Values in List
+# In this kata, your job is to return the two distinct highest values in a list. If there're less than 2 unique values, return as many of them, as possible. The result should also be ordered from highest to lowest.
 
+def two_highest(arg1):
+    arg1 = list(set(arg1))
+    arg1.sort(reverse = True)
+    if len(arg1) > 2:
+        return [arg1[0], arg1[1]]
+    else:
+        return arg1
+        
 ########################################################################################################################################################################
 #
 #
