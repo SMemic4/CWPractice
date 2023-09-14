@@ -2417,12 +2417,40 @@ def swap_values(args):
     return args.reverse()
 
 ########################################################################################################################################################################
-#
-#
+# A Letter's Best Friend
+# Given a string, return if a given letter always appears immediately before another given letter.
+
+def best_friend(txt, a, b):
+    active = True
+    for x in range(0,len(txt)):
+        if txt[x] == a:
+            try:
+                if txt[x + 1] != b:
+                    active = False
+            except:
+                active = False
+    return active
 
 ########################################################################################################################################################################
+# Rock Paper Scissors!
+
 #
-#
+
+def rps(p1, p2):
+    if p1 == p2:
+        return "Draw!"
+    elif p1 == "rock" and p2 != "paper":
+        return "Player 1 won!"
+    elif p1 == "rock" and p2 == "paper":
+        return "Player 2 won!"
+    elif p1 == "scissors" and p2 != "paper":
+        return "Player 2 won!"
+    elif p1 == "scissors" and p2 == "paper":
+        return "Player 1 won!"
+    elif p1 == "paper" and p2 != "scissors":
+         return "Player 1 won!"
+    else: 
+        return "Player 2 won!"
 
 ########################################################################################################################################################################
 #
