@@ -2494,12 +2494,18 @@ def well(x):
         return "Fail!"
 
 ########################################################################################################################################################################
-#
-#
+# Grasshopper - Array Mean
+# Find the mean (average) of a list of numbers in an array.
+
+def find_average(nums):
+    return sum(nums)/len(nums)
 
 ########################################################################################################################################################################
-#
-#
+# Age Range Compatibility Equation
+# Given an integer (1 <= n <= 100) representing a person's age, return their minimum and maximum age range.
+
+def dating_range(age):
+    return f"{int(age/2+7)}-{(age-7)*2}" if age > 14 else f"{int(age-0.10*age)}-{int(age+ 0.10 * age)}"
 
 ########################################################################################################################################################################
 #
