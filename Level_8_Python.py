@@ -2535,6 +2535,10 @@ def merge_arrays(first, second):
         if x not in les2:
             les2.append(x)
     return sorted(les2)
+
+def merge_arrays(a, b): 
+    return sorted(set(a + b))
+    
 ########################################################################################################################################################################
 #
 #
