@@ -2522,9 +2522,19 @@ def HQ9(code):
         return None
 
 ########################################################################################################################################################################
-#
-#
+# Merging sorted integer arrays (without duplicates)
+# Write a function that merges two sorted arrays into a single one. The arrays only contain integers. Also, the final outcome must be sorted and not have any duplicate.
 
+def merge_arrays(first, second): 
+    for x in second:
+        if x not in first:
+            first.append(x)
+    les = sorted(first)
+    les2 = list()
+    for x in les:
+        if x not in les2:
+            les2.append(x)
+    return sorted(les2)
 ########################################################################################################################################################################
 #
 #
