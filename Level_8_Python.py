@@ -2582,12 +2582,27 @@ def guess_blue(blue_start, red_start, blue_pulled, red_pulled):
     return ((blue_start-blue_pulled)/(blue_start + red_start - blue_pulled - red_pulled))
 
 ########################################################################################################################################################################
-#
-#
+# Regexp Basics - is it a digit?
+# return true if given object is a digit (0-9), false otherwise
+
+def is_digit(n):
+    try:
+        if len(n) != 1:
+            return False
+        n = int(n)
+        return True
+    except:
+        return False
 
 ########################################################################################################################################################################
+# String cleaning
 #
-#
+
+def string_clean(s):
+    les = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    for x in les:
+        s = s.replace(x, "")
+    return s 
 
 ########################################################################################################################################################################
 #
