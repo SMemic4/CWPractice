@@ -2605,8 +2605,20 @@ def string_clean(s):
     return s 
 
 ########################################################################################################################################################################
+# Simple Fun #261: Whose Move
 #
-#
+
+def whose_move(last_player, win):
+    if win == True:
+        return last_player
+    else:
+        if last_player == "white":
+            return "black"
+        else:
+            return "white"
+
+def whoseMove(lastPlayer, win):
+    return lastPlayer if win else 'white' if lastPlayer == 'black' else 'black'
 
 ########################################################################################################################################################################
 #
