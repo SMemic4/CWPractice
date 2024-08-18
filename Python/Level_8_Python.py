@@ -2640,8 +2640,10 @@ def temple_strings(obj, feature):
     return obj + " are " + feature
 
 ########################################################################################################################################################################
-#
-#
+# Is the date tody
+#  Write a simple function that takes as a parameter a date object and returns a boolean value representing whether the date is today or not.
+
+
 
 ########################################################################################################################################################################
 #
